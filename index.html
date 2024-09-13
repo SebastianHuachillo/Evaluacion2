@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragonball Personajes Evaluación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Búsqueda de personaje -->
+    <div class="search">
+        <form class="dragonball-character">
+            <div class="container-search">
+                <label>
+                    <h1>Dragonball Personajes Evaluación</h1>
+                </label>
+                <label>
+                    <p>Buscar un personaje por nombre</p>
+                </label>
+                <input type="text" class="search-characters" id="search-characters" placeholder="Buscar un personaje">
+            </div>
+        </form>
+    </div>
+
+    <!-- Filtros y acciones -->
+    <div class="character-list">
+        <ul>
+            <li><button onclick="mostrarTodos()">Mostrar personajes</button></li>
+            <li><button onclick="buscarPersonaje('Gohan')">Encontrar a Gohan</button></li>
+            <li><button onclick="filtrarPorRaza('Saiyan')">Filtrar Saiyayines</button></li>
+            <li><button onclick="filtrarPorRaza('Android')">Filtrar Androides</button></li>
+            <li><button onclick="menorPoder()">Menor poder de todos</button></li>
+            <li><button onclick="mayorPoder()">Mayor poder de todos</button></li>
+            <li><button onclick="posicionDeVegeta()">Posición de Vegeta</button></li>
+            <li><button onclick="filtrarPorGenero('Female')">Personajes femeninos</button></li>
+            <li><button onclick="totalPoder()">Total poder de todos personajes</button></li>
+        </ul>
+    </div>
+
+    <!-- Contenedor para mostrar los personajes -->
+    <div id="container" class="container">
+    </div>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
